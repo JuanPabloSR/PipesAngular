@@ -4,7 +4,62 @@
 </div>
 
 <div class="p-grid">
-  <div class="p-col-4">1</div>
-  <div class="p-col-4">2</div>
-  <div class="p-col-4">3</div>
+  <div class="p-col-4">
+    <p-card header="Uppercase" [subheader]="nameLower | uppercase">
+      {{ nameLower | uppercase }}
+    </p-card>
+  </div>
+  <div class="p-col-4">
+    <p-card header="Lowercase" [subheader]="nameUpper | lowercase">
+      {{ nameUpper | lowercase }}
+    </p-card>
+  </div>
+  <div class="p-col-4">
+    <p-card header="Titlecase" [subheader]="nameComplete | titlecase">
+      {{ nameComplete | titlecase }}
+    </p-card>
+  </div>
+</div>
+
+<div class="text-layout">
+  <h1>Date | Pipe</h1>
+  <p>Pipes to show dates</p>
+</div>
+
+<div class="p-grid">
+  <div class="p-col-6">
+    <p-card>
+      <ul>
+        <li>date</li>
+        <li>date | date</li>
+        <li>date | date: 'short'</li>
+        <li>date | date: 'long'</li>
+        <li>date | date: 'MMMM, dd, yyyy'</li>
+      </ul>
+
+      <hr />
+      <ul>
+        <li>date | date : "long": 'GMT-6'</li>
+        <li>date | date : "long": 'GMT-4'</li>
+      </ul>
+    </p-card>
+  </div>
+  <div class="p-col-6">
+    <p-card>
+      <ul>
+        <li>{{ date }}</li>
+        <li>{{ date | date }}</li>
+        <li>{{ date | date : "short" }}</li>
+        <li>{{ date | date : "long" }}</li>
+        <li>{{ date | date : "MMMM, dd, yyyy" }}</li>
+      </ul>
+
+      <hr />
+      <ul>
+        <li>{{ date | date : "long" : "GMT-6" }}</li>
+        <li>{{ date | date : "long" : "GMT-4" }}</li>
+        <li>{{ date | date : "long" : "": "en" }}</li>
+      </ul>
+    </p-card>
+  </div>
 </div>
