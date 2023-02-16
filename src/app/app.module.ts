@@ -8,13 +8,17 @@ import { SalesModule } from './sales/sales.module';
 
 //Change local at the app
 import localeEs from '@angular/common/locales/es-CL'
+import localeFr from '@angular/common/locales/fr'
+
+
 import { registerLocaleData } from '@angular/common'
 registerLocaleData(localeEs)
+registerLocaleData(localeFr)
 
 @NgModule({
   declarations: [AppComponent],
   imports: [BrowserModule, AppRouterModule, SharedModule, SalesModule],
-  providers: [{provide: LOCALE_ID, useValue: 'es-CL'}],
+  providers: [{provide: LOCALE_ID, useValue: 'es-CL'}, ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
