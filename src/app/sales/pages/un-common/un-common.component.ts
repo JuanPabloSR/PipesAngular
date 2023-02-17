@@ -1,16 +1,33 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-un-common',
   templateUrl: './un-common.component.html',
-  styles: [
-  ]
+  styles: [],
 })
-export class UnCommonComponent implements OnInit {
+export class UnCommonComponent {
+  // i18Select
+  name: string = 'Juan Pablo';
+  genre: string = 'male';
+  invitationMap = {
+    male: 'delight',
+    female: 'pleasure',
+  };
 
-  constructor() { }
+  // i18SelectPlural
+  customer: string[] = ['Ivon', 'Juan'];
+  customerMap = {
+    '=0': 'no have costumers waiting',
+    '=1': '1 costumer waiting',
+    other: 'have # costumers waiting',
+  };
 
-  ngOnInit(): void {
+  changeCostumer() {
+    this.name = 'Ivon';
+    this.genre = 'female';
   }
 
+  deleteCostumer() {
+    this.customer.pop();
+  }
 }

@@ -1,1 +1,29 @@
-<p>un-common works!</p>
+<div class="text-layout">
+  <h1>Un common Pipes</h1>
+  <p>Pipes included in angular - Usually included in the Common Module.</p>
+</div>
+
+<div class="p-grid">
+  <div class="p-col p-md-6">
+    <p-fieldset legend="i18nSelect pipe" [toggleable]="true">
+      Greetings {{ name }}, it is a {{ genre | i18nSelect : invitationMap }} to
+      invite you to our event.</p-fieldset
+    > <br>
+    <button pButton pRipple (click)="changeCostumer()" type="button" icon="pi pi-user" class="p-button-rounded p-button-info"></button>
+
+  </div>
+  <div class="p-col p-md-6">
+    <p-fieldset legend="i18nSelect plural pipe" [toggleable]="true">
+      {{ customer.length | i18nPlural : customerMap }}
+    </p-fieldset>
+    <br>
+    <button
+      pButton
+      pRipple
+      (click)="deleteCostumer()"
+      type="button"
+      icon="pi pi-times"
+      class="p-button-rounded p-button-danger"
+    ></button>
+  </div>
+</div>
