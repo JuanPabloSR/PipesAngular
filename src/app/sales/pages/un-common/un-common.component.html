@@ -8,15 +8,22 @@
     <p-fieldset legend="i18nSelect pipe" [toggleable]="true">
       Greetings {{ name }}, it is a {{ genre | i18nSelect : invitationMap }} to
       invite you to our event.</p-fieldset
-    > <br>
-    <button pButton pRipple (click)="changeCostumer()" type="button" icon="pi pi-user" class="p-button-rounded p-button-info"></button>
-
+    >
+    <br />
+    <button
+      pButton
+      pRipple
+      (click)="changeCostumer()"
+      type="button"
+      icon="pi pi-user"
+      class="p-button-rounded p-button-info"
+    ></button>
   </div>
   <div class="p-col p-md-6">
     <p-fieldset legend="i18nSelect plural pipe" [toggleable]="true">
       {{ customer.length | i18nPlural : customerMap }}
     </p-fieldset>
-    <br>
+    <br />
     <button
       pButton
       pRipple
@@ -25,5 +32,18 @@
       icon="pi pi-times"
       class="p-button-rounded p-button-danger"
     ></button>
+  </div>
+
+  <div class="p-col p-md-6">
+    <p-fieldset legend="Slice pipe" [toggleable]="true">
+      <b>Original</b>
+      <pre>{{ customer }}</pre>
+      <b>Slice:0:2</b>
+      <pre>{{ customer | slice:0:2 }}</pre>
+      <b>Slice:1:2</b>
+      <pre>{{ customer | slice:1:2 }}</pre>
+      <b>Slice:1:3</b>
+      <pre>{{ customer | slice:1:3 }}</pre>
+    </p-fieldset>
   </div>
 </div>
