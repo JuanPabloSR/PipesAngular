@@ -15,7 +15,7 @@ export class UnCommonComponent {
   };
 
   // i18SelectPlural
-  customer: string[] = ['Ivon', 'Juan', 'Pablo', 'Sebas'];
+  customer: string[] = ['Ivon', 'Juan', 'Pablo', 'Sebas', 'Picon'];
   customerMap = {
     '=0': 'no have costumers waiting',
     '=1': '1 costumer waiting',
