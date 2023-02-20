@@ -39,13 +39,40 @@
       <b>Original</b>
       <pre>{{ customer }}</pre>
       <b>Slice:0:2</b>
-      <pre>{{ customer | slice:0:2 }}</pre>
+      <pre>{{ customer | slice : 0 : 2 }}</pre>
       <b>Slice:1:2</b>
-      <pre>{{ customer | slice:1:2 }}</pre>
+      <pre>{{ customer | slice : 1 : 2 }}</pre>
       <b>Slice:1:3</b>
-      <pre>{{ customer | slice:1:3 }}</pre>
+      <pre>{{ customer | slice : 1 : 3 }}</pre>
       <b>Slice:1:4</b>
-      <pre>{{ customer | slice:1:4 }}</pre>
+      <pre>{{ customer | slice : 1 : 4 }}</pre>
+    </p-fieldset>
+  </div>
+
+  <div class="p-col p-md-6">
+    <p-fieldset legend="Json pipe" [toggleable]="true">
+      <pre>
+      {{ heros | json }}
+     </pre
+      >
+    </p-fieldset>
+  </div>
+
+  <div class="p-col p-md-6">
+    <p-fieldset legend="KeyValue pipe" [toggleable]="true">
+      <ul>
+        <li *ngFor="let item of person | keyvalue">
+          <b> {{ item.key | titlecase }}: {{ item.value }} </b>
+        </li>
+      </ul>
+    </p-fieldset>
+  </div>
+
+  <div class="p-col p-md-6">
+    <p-fieldset legend="Async pipe" [toggleable]="true">
+      <!-- <pre>{{ myObservable | async }}</pre> -->
+      <pre *ngIf="!(valuePromise | async)">Resolving promise</pre>
+      <pre>{{ valuePromise | async }}</pre>
     </p-fieldset>
   </div>
 </div>

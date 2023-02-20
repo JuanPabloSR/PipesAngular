@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { rejects } from 'assert';
+import { resolve } from 'dns';
+import { interval } from 'rxjs';
 
 @Component({
   selector: 'app-un-common',
@@ -30,4 +33,35 @@ export class UnCommonComponent {
   deleteCostumer() {
     this.customer.pop();
   }
+
+  // KeyValue pipes
+  person = {
+    name: 'Toro',
+    age: 23,
+    adress: 'Bucaramanga, Colombia',
+  };
+
+  // KeyValue pipes
+  heros = [
+    {
+      name: 'Hulk',
+      Fly: false,
+    },
+    {
+      name: 'Spiderman',
+      Fly: false,
+    },
+    {
+      name: 'IronMan',
+      Fly: true,
+    },
+  ];
+
+  // Async Pipe
+  myObservable = interval(1000);
+  valuePromise = new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve('We have data on the promise');
+    }, 3500);
+  });
 }
