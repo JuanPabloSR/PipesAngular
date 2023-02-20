@@ -1,4 +1,7 @@
 <div class="text-layout">
-  <h1>Sort Pipes</h1>
-  <p>Pipes included in angular - Usually included in the Common Module.</p>
+  <h1>Custom Pipes</h1>
+  <p>pipes customized by {{ 'us' | capitalization:inMayus }}</p>
+
+  <button pButton pRipple (click)="changeMayus()"  type="button" label="Toggle Mayus" class="p-button-success"></button>
+
 </div>
