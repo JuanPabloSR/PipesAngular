@@ -1,5 +1,12 @@
 # PipesApp
 
+Angular application, with route management to review the most common and used angular pipes, also some custom pipes were created.
+Deploy link: https://pipesenangular.netlify.app/
+
+
+![pipes](https://user-images.githubusercontent.com/62584398/220474458-c178134c-3b73-4dc8-9212-ff6a97b11271.gif)
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.5.
 
 ## Development server
